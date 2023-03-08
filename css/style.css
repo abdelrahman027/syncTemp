@@ -1,0 +1,830 @@
+/*********************** start variables *************************/
+:root {
+    --unique-color: #9a67e7;
+    --section-color: #e8eff6;
+    --body-normal: #f7fafd;
+    --check-color: #19ca94;
+    --red-color : #ff556e;
+    --main-color: #333;
+    --paragraph-color :#77777b;
+    --main-trans : 0.3s ;
+}
+/*********************** end variables *************************/
+/*********************** start global rules *************************/
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--body-normal);
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+a {
+    text-decoration: none;
+}
+.clear {
+    clear: both;
+}
+
+/*********************** end global rules *************************/
+/*********************** start header *************************/
+.header {
+    padding-top: 25px;
+}
+.header .logo {
+    float: left;
+}
+.header ul li {
+    float: right;
+    padding-left: 20px;
+}
+@media (max-width:767px) {
+    .header ul li {
+        float: none;
+        text-align:right;
+    }
+
+}
+.header ul li a {
+    color: var(--main-color);
+    text-transform: uppercase;
+    transition: var(--main-trans);
+}
+.header ul li a:hover {
+    color: var(--red-color);
+}
+.header ul .active a {
+    color: var(--red-color);
+    border: 1px solid var(--red-color);
+    padding: 5px 20px;
+    border-radius: 30px;
+transition: var(--main-trans);
+}
+@media (max-width:767px) {
+    .header ul .active a {
+        margin-bottom:10px;
+        display: inline-block;
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
+.header ul .active a:hover {
+    background-color: var(--red-color);
+    color: white;
+}
+/*********************** end header rules *************************/
+/*********************** start landing rules *************************/
+.landing {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.landing .text h1 {
+    text-transform: capitalize;
+    letter-spacing: 1.2px;
+    color: var(--main-color);
+}
+.landing .text p {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    color: var(--paragraph-color);
+}
+.download {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.download a {
+    background-color: #ff556e;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    margin-left: 10px;
+    transition: var(--main-trans);
+}
+@media (max-width:767px) {
+    .download a {
+        display: block;
+        margin-bottom: 2px ;
+    }
+}
+.download a:hover {
+    background-color: white;
+    color: var(--red-color);
+    border: 1px solid var(--red-color);
+}
+.landing .image img {
+    width: 600px;
+}
+@media(max-width:767px) {
+    .landing .image img {
+    width: 200px;
+    }
+}
+.landing .decor .yellow {
+    position: absolute;
+    top:50px;
+    right: 100px;
+}
+.landing .decor .green {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+}
+.landing .decor .white1 {
+    position: absolute;
+    top: 3%;
+    left: -350px;
+}
+.landing .decor .white {
+    position: absolute;
+    top: 3%;
+    right: -350px;
+    width: 500px;
+}
+.landing .decor .blue {
+    position: absolute;
+    top: 41%;
+    left: 110px;
+    z-index: 1;
+}
+@media (max-width:767px) {
+    .landing .decor {
+        display: none;
+    }
+}
+/*********************** end landing rules *************************/
+/*********************** Start desc rules *************************/
+.description {
+    text-align: center;
+    padding-bottom: 50px;
+}
+/* .description .taps {
+
+
+} */
+.description .tap {
+    float: left;
+    width: 13%;
+    font-size: 24px;
+    padding-top: 30px;
+}
+@media (max-width:767px) {
+    .description .tap {
+        width: 50%;
+    }
+}
+.description .man {
+    margin-left: 195px;
+}
+@media (max-width: 767px) {
+    .description .man {
+        margin-left: auto;
+    }
+}
+.description .man i {
+    color: var(--unique-color);
+    background-color:#9a67e744 ;
+    padding: 20px;
+    border-radius: 50%;
+}
+.description .chat i {
+    color: #ffb30f;
+    background-color:#ffb30f44 ;
+    padding: 20px;
+    border-radius: 50%;
+}
+.description .gear i {
+    color: #ff556e;
+    background-color:#ff556e44 ;
+    padding: 20px;
+    border-radius: 50%;
+}
+.description .code i {
+    color: #19ca94;
+    background-color:#19ca9544 ;
+    padding: 20px;
+    border-radius: 50%;
+}
+.description .rocket i {
+    color: #50b9e8;
+    background-color:#50b8e844 ;
+    padding: 20px;
+    border-radius: 50%;
+}
+.description .text h4 {
+    font-size: 12px;
+    color: var(--paragraph-color);
+    font-weight: normal;
+
+}
+/*********************** end desc rules *************************/
+/*********************** start preview rules *************************/
+.preview {
+    text-align: center;
+    position: relative;
+}
+.preview .image {
+    float: left;
+    width: 50%;
+}
+@media (max-width:767px) {
+    .preview .image {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+.preview .image img {
+    width: 400px;
+    /* margin-left: 20px; */
+}
+@media (max-width:991px) {
+    .preview .image img {
+        width: 300px;
+    }
+}
+
+@media (max-width:767px) {
+    .preview .image img {
+        width: 200px;
+        text-align: center;
+    }
+}
+.preview .text {
+    float: right;
+    width: 40%;
+    margin-right: 50px;
+    text-align: left;
+}
+@media (max-width:767px) {
+    .preview .text {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+    }
+}
+.preview .text h2 {
+    font-size: 30px;
+    line-height: 1.2;
+}
+.preview .text p {
+    line-height: 2;
+    color: var(--paragraph-color);
+    font-size: 14px;
+}
+.preview .text ul {
+    list-style: square;
+    list-style: square;
+    line-height: 2;
+    color: var(--paragraph-color);
+    font-size: 14px;
+}
+.preview .button {
+    text-align: center;
+    position: relative;
+    text-align: center;
+    position: relative;
+    /*   */
+    bottom: 51px;
+}
+@media (max-width:991px) {
+    .preview .button {
+        top: 100px;
+        width: fit-content;
+    }
+}
+.preview .button a {
+    color: white;
+    background-color: var(--red-color);
+    padding: 5px 20px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: var(--main-trans);
+}
+.preview .button a:hover {
+    border: 1px solid var(--red-color);
+    background-color: white;
+    color: var(--red-color);
+}
+
+/*********************** end preview rules *************************/
+/*********************** start calender rules *************************/
+.calender {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--section-color);
+    overflow: hidden;
+    
+}
+.calender .container {
+    margin-top: 100px;
+}
+
+.calender .dialog {
+    float: left;
+    width: 40%;
+    text-align: left;
+    margin-left: 50px;
+}
+@media (max-width:767px) {
+    .calender .dialog {
+        width: 100%;
+        margin: auto ;
+        text-align: center;
+    }
+}
+.calender .image {
+    float: right;
+    width: 50%;
+    
+}
+@media (max-width:767px) {
+    .calender .image {
+        width: 100%;
+    }
+}
+.calender .image img {
+    width: 400px;
+}
+@media (max-width:767px) {
+    .calender .image img {
+        width: 300px;
+        margin-top: 50px;
+    }
+}
+.calender .boxes a {
+    background-color: var(--body-normal);
+    padding: 5px 15px;
+    text-transform: capitalize;
+    color: var(--main-color);
+    font-size: 14px;
+    transition: var(--main-trans);
+}
+.calender .boxes .active {
+    background-color: var(--unique-color);
+    color: white;
+}
+.calender .boxes a:hover {
+    background-color: #77777b;
+    color: white;
+}
+
+.calender .text p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--paragraph-color);
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.calender .text ul {
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--paragraph-color);
+}
+.calender .text ul li::before {
+    content: "";
+    font-family: "font awesome 5";
+    color: #19ca94;
+}
+.calender .buttons {
+    margin-top: 40px;
+}
+.calender .buttons .terms {
+    color: white;
+    background-color: var(--red-color);
+    padding: 5px 15px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: var(--main-trans);
+}
+.calender .buttons .terms:hover {
+    background-color: white;
+    color: var(--red-color);
+    border: 1px solid var(--red-color);
+}
+.calender .buttons .privacy {
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    padding: 5px 15px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: var(--main-trans);
+}
+.calender .buttons .privacy:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+/*********************** end calender rules *************************/
+/*********************** start features rules *************************/
+.features {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.features h3 {
+    text-transform: capitalize;
+}
+.features .features-head {
+    margin-bottom: 50px;
+}
+.features .left {
+    float: left;
+    text-align: right;
+    width: calc(100% / 3);
+}
+
+.features .right {
+    float: right;
+    text-align: left;
+    width: calc(100% / 3);
+}
+@media (max-width:767px) {
+    .features .right,
+    .features .left {
+        width: 100%;
+        text-align: center;
+    }
+}
+.features .image {
+    float: left;
+    width: calc(100% / 3);
+}
+.features .image img {
+    width: 250px;
+}
+@media (max-width:767px) {
+    .features .image {
+        display: none;
+    }
+}
+.features h4 {
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--main-color);
+    letter-spacing: 1.2px;
+    margin-bottom: 30px;
+}
+.features h4 i {
+    margin: 5px;
+}
+.features .man h4 i {
+    color: white;
+    background-color: var(--unique-color);
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+.features .code h4 i {
+    color: white;
+    background-color: var(--check-color);
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+.features .gear h4 i {
+    color: white;
+    background-color: var(--red-color);
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+.features .chat h4 i {
+    color: white;
+    background-color: #ffb30f;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+.features .rocket h4 i {
+    color: white;
+    background-color: #50b9e8;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+.features .down h4 i {
+    color: white;
+    background-color: var(--unique-color);
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+.features p {
+    color: var(--paragraph-color);
+    line-height: 1.7;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+@media (max-width:767px) {
+    .features p,
+    .features h4 {
+        margin: 0;
+    }
+}
+/*********************** end features rules *************************/
+/*********************** start shuffle rules *************************/
+.shuffle {
+    background-color: var(--section-color);
+    text-align: center;
+}
+.shuffle .container {
+    position: relative;
+}
+.shuffle .fa-chevron-left {
+    position: absolute;
+    top: 50%;
+    left: 26px;
+    font-size: 40px;
+    color: var(--paragraph-color);
+}
+.shuffle .fa-chevron-right {
+    position: absolute;
+    top: 50%;
+    right: 26px;
+    font-size: 40px;
+    color: var(--paragraph-color);
+    
+}
+@media (max-width:767px) {
+    .shuffle i {
+        display: none;
+    }
+}
+.shuffle img {
+    padding: 50px 15px;
+    width:170px ;
+    transition: var(--main-trans);
+}
+.shuffle img:hover {
+    transform: rotate(5deg) scale(1.2);
+}
+/*********************** end shuffle rules *************************/
+/*********************** start testimonials rules *************************/
+@media (max-width:767px) {
+    .testimonials {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+}
+@media (min-width:768px) {
+    .testimonials {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+}
+.testimonials .box {
+    float: left;
+    width: calc(100% / 3);
+    position: relative;
+}
+@media (max-width:767px) {
+    .testimonials .box {
+        float: left;
+        width: 100%;
+        position: relative;
+    }
+}
+.testimonials h2 {
+    text-transform: capitalize;
+}
+.testimonials .test-box {
+    padding-bottom: 150px;
+}
+.testimonials .box .star hr {
+    width: 10%;
+    background-color: var(--paragraph-color);
+    height: 1px;
+
+}
+.testimonials .box .star::before {
+    content: "";
+    height: 2px;
+    width: 100px;
+    color: black;
+}
+.testimonials .images {
+    padding-top: 80px;
+    padding-bottom: 80px
+}
+.testimonials .images img {
+    padding-left: 20px;
+}
+@media (max-width:767px) {
+    .testimonials .images img {
+        padding-bottom: 20px;
+    }
+}
+.testimonials .box p {
+    line-height: 2;
+    color: var(--paragraph-color);
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+/*********************** end testimonials rules *************************/
+/*********************** start stats rules *************************/
+.stats {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    background-color: var(--section-color);
+}
+.stats .all-stats .box {
+    float: left;
+    width: 20%;
+}
+@media (max-width:767px) {
+    .stats .all-stats .box {
+        width: 100%;
+    }
+}
+.stats .all-stats .box i {
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.stats .all-stats .box .num {
+    font-size: 36px;
+    font-weight: 700;
+}
+.stats .all-stats .man i {
+    color: #9a67e7;
+}
+.stats .all-stats .code i {
+    color: #19ca94;
+
+}
+.stats .all-stats .gear i  {
+    color: #ff556e;
+}
+.stats .all-stats .chat i {
+    color: #ffb30f;
+}
+.stats .all-stats .rocket i {
+    color: #50b9e8;
+
+}
+.stats .all-stats .box p {
+    color: var(--paragraph-color);
+    text-transform: capitalize;
+}
+/*********************** end stats rules *************************/
+/*********************** start mobile rules *************************/
+.mobile {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.mobile .main-image img {
+    width: 600px;
+}
+@media(max-width:767px) {
+    .mobile .main-image img  {
+        width: 300px;
+    }
+}
+.mobile .decor .yellow {
+    position: absolute;
+    top:50px;
+    right: 100px;
+}
+.mobile .decor .green {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+}
+.mobile .decor .white1 {
+    position: absolute;
+    top: 3%;
+    left: -350px;
+}
+.mobile .decor .white {
+    position: absolute;
+    top: 3%;
+    right: -350px;
+    width: 500px;
+}
+.mobile .decor .blue {
+    position: absolute;
+    top: 41%;
+    left: 110px;
+    z-index: 1;
+}
+@media (max-width:767px) {
+    .mobile .decor {
+        display: none;
+    }
+}
+.mobile .content p {
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 2;
+    color: var(--paragraph-color);
+    padding-bottom: 20px;
+}
+/*********************** end mobile rules *************************/
+/*********************** start footer rules *************************/
+.footer {
+    text-align: center;
+    
+}
+.footer .boxes {
+    margin-left: 20px;
+}
+.footer .box {
+    float: left;
+    width: 20%;
+    text-align: left;
+    padding-left: 45px;
+}
+@media (max-width:767px) {
+    .footer .box {
+        width: 50%;
+    }
+}
+.footer .box p,
+.footer .box li {
+    color: var(--paragraph-color);
+    font-size: 10px;
+    line-height: 2;
+
+}
+
+.footer .box h5 {
+    color: var(--paragraph-color);
+    text-transform: capitalize;
+}
+.footer  .social i  {
+    color: var(--paragraph-color);
+    padding-top: 30px;;
+    padding: 10px;
+}
+.end p {
+    font-size: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 1.2px;
+    color: var(--paragraph-color);
+    padding-top: 20px;
+}
+/*********************** end footer rules *************************/
+.button-up {
+    position: sticky;
+    bottom: 20px;
+    left: 200px;
+    z-index: 3;
+}
+.button-up a {
+    color: white;
+    font-size: 14px;
+    background-color: #ff556e;
+    padding: 2px 10px;
+    border-radius: 30px;
+    transition: var(--main-trans);
+}
+.button-up a:hover {
+    background-color: white;
+    border: 1px solid var(--red-color);
+    color: var(--red-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
